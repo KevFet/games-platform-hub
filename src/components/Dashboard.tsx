@@ -142,7 +142,7 @@ export function Dashboard({ user }: { user: any }) {
                     <div className="h-1 w-20 bg-neon-blue rounded-full shadow-[0_0_15px_rgba(0,242,254,0.5)]" />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {GAMES.map((game, index) => (
                         <GameCard
                             key={game.key}
