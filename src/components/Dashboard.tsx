@@ -25,72 +25,63 @@ const GAMES = [
         title: 'Tu Préfères',
         url: 'https://tu-preferes-2026.vercel.app',
         icon: <Users />,
-        color: '#00f2fe',
-        size: 'col-span-1 row-span-2'
+        color: '#00f2fe'
     },
     {
         key: 'bad_choices',
         title: 'Bad Choices',
         url: 'https://bad-choices-2026.vercel.app',
         icon: <Skull />,
-        color: '#ff00c1',
-        size: 'col-span-1 row-span-1'
+        color: '#ff00c1'
     },
     {
         key: 'mouton_mouton',
         title: 'Mouton Mouton',
         url: 'https://mouton-mouton-2026.vercel.app',
         icon: <Gamepad2 />,
-        color: '#7000ff',
-        size: 'col-span-1 row-span-1'
+        color: '#7000ff'
     },
     {
         key: '20_balles',
         title: '20 balles pour ça',
         url: 'https://20-balles-2026.vercel.app',
         icon: <Calculator />,
-        color: '#FFD700',
-        size: 'col-span-2 row-span-1'
+        color: '#FFD700'
     },
     {
         key: 'quen_dira_t_on',
         title: 'Qu’en dira-t-on',
         url: 'https://quen-dira-t-on-2026.vercel.app',
         icon: <MessageCircle />,
-        color: '#00FA9A',
-        size: 'col-span-1 row-span-1'
+        color: '#00FA9A'
     },
     {
         key: 'one_round',
         title: 'One Round',
         url: 'https://one-round-2026.vercel.app',
         icon: <RotateCcw />,
-        color: '#FF4500',
-        size: 'col-span-1 row-span-2'
+        color: '#FF4500'
     },
     {
         key: 'times_up',
         title: "Time's Up",
         url: 'https://times-up-2026.vercel.app',
         icon: <Timer />,
-        color: '#1E90FF',
-        size: 'col-span-1 row-span-1'
+        color: '#1E90FF'
     },
     {
         key: 'fiesta',
         title: 'Fiesta de los Muertos',
         url: 'https://fiesta-muertos-2026.vercel.app',
         icon: <Dices />,
-        color: '#FF69B4',
-        size: 'col-span-1 row-span-1'
+        color: '#FF69B4'
     },
     {
         key: 'heads_up',
         title: 'Heads up',
         url: 'https://heads-up-game-kev.vercel.app',
         icon: <Smartphone />,
-        color: '#ADFF2F',
-        size: 'col-span-2 row-span-1'
+        color: '#ADFF2F'
     }
 ]
 
@@ -104,7 +95,7 @@ export function Dashboard({ user }: { user: any }) {
     }
 
     return (
-        <div className="min-h-screen mesh-gradient relative pb-20 overflow-x-hidden">
+        <div className="min-h-screen mesh-gradient relative pb-20 overflow-x-hidden text-white font-[family-name:var(--font-outfit)]">
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
 
             {/* Header */}
@@ -151,7 +142,7 @@ export function Dashboard({ user }: { user: any }) {
                     <div className="h-1 w-20 bg-neon-blue rounded-full shadow-[0_0_15px_rgba(0,242,254,0.5)]" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[200px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {GAMES.map((game, index) => (
                         <GameCard
                             key={game.key}
@@ -160,7 +151,6 @@ export function Dashboard({ user }: { user: any }) {
                             icon={game.icon}
                             color={game.color}
                             description={t(`description_${game.key}` as any)}
-                            className={game.size}
                         />
                     ))}
                 </div>
